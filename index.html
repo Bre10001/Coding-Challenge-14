@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support Tickets</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+    /* STYLING WITH CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+header {
+    background-color: #698ec5;
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Main Ticket Container */
+.ticket-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #f9f9f9;
+}
+
+/* Individual Ticket Card */
+.ticket-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+/* Ticket Card Hover Effect */
+.ticket-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ticket Information */
+.ticket-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.ticket-details {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .ticket-container {
+        padding: 1rem;
+    }
+}
+
+</style>
+
+
+<body>
+
+    <!-- Header with Page Title -->
+    <header>
+        <h1>Customer Support Tickets</h1>
+    </header>
+
+    <!-- Container to display the list of tickets loaded from API -->
+    <div id="ticketContainer" class="ticket-container">
+        <!-- Ticket cards will be dynamically inserted here -->
+    </div>
+
+    <!-- Container to handle errors -->
+    <div id="errorMessage" class="error-message"></div>
+
+    <!-- Link to JavaScript file -->
+    <script src="main.js"></script>
+</body>
+</html>
